@@ -1,5 +1,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  daisyui: {
     themes: [
       {
         DoctorTheme: {
@@ -12,6 +16,7 @@ module.exports = {
       },
       "dark",
       "garden",
-    ],
+  ]
+},
   plugins: [require("daisyui")],
 };
