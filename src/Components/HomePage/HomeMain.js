@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../SharedPages/Footer/Footer';
 import HomeAppointmentSection from './HomeAppointmentSection';
 import HomePageContact from './HomePageContact';
 import HomeTestimonial from './HomeTestimonial';
@@ -13,6 +14,7 @@ const HomeMain = () => {
         <HomeAppointmentSection/>
         <HomeTestimonial/>
         <HomePageContact/>
+        <Footer/>
         </div>
     );
 };

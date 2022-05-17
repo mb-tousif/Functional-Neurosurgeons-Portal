@@ -4,9 +4,10 @@ import logo from '../../../assets/images/logo.png'
 import footerBackground from '../../../assets/images/footer.png'
 const Footer = () => {
   return (
-<footer style={{background: `url(${footerBackground})`,backgroundSize:'cover'}} className="footer p-10 text-base-content text-center">
-  <div className="flex"><img className="mx-auto my-auto" src={logo} width="50" height="50" alt="Logo" />
-    <div className="mx-auto my-auto md:text-xl text-zinc-500 md:font-bold"><p>Functional Neurosurgeons</p><p>The Best Functional Neurosurgeons of Our Country.</p><p>Copyright &#169; {new Date().getFullYear()} - All right reserved</p></div>
+<footer style={{background: `url(${footerBackground})`,backgroundSize:'cover'}}>
+  <div className="footer p-10 text-base-content text-center">
+    <div className="flex"><img className="mx-auto my-auto" src={logo} width="50" height="50" alt="Logo" />
+    <div className="mx-auto my-auto md:text-xl text-zinc-500 md:font-bold"><p>Functional Neurosurgeons</p><p>The Best Functional Neurosurgeons of Our Country.</p></div>
   </div> 
   <div className="mx-auto my-auto">
     <span className="footer-title">Services</span> 
@@ -28,6 +29,8 @@ const Footer = () => {
     <a className="link link-hover">Privacy policy</a> 
     <a className="link link-hover">Cookie policy</a>
   </div>
+  </div>
+  <p className="mb-6 mt-6 text-center">Copyright &#169; {new Date().getFullYear()} - All right reserved</p>
 </footer>
   );
 };

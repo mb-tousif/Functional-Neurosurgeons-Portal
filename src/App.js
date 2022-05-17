@@ -7,12 +7,11 @@ import HomeMain from './Components/HomePage/HomeMain';
 import LogIn from './Components/LogInOut/LogIn';
 import NotFoundPage from './Components/notFoundPage/NotFoundPage';
 import Reviews from './Components/ReviewsPage/Reviews';
-import Footer from './Components/SharedPages/Footer/Footer';
 import Header from './Components/SharedPages/Header/Header';
 
 function App() {
   return (
-    <div className="text-zinc-500">
+    <div className="text-zinc-500 max-w-7xl mx-auto">
       <Header />
       <Routes>
         <Route path="/" element={<HomeMain />} />
@@ -24,7 +23,6 @@ function App() {
         <Route path="/logIn" element={<LogIn />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
