@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeAppointmentSection from './HomeAppointmentSection';
+import HomePageContact from './HomePageContact';
 import HomeTestimonial from './HomeTestimonial';
 import ServiceMain from './ServiceMain';
 import TopBanner from './TopBanner';
@@ -11,6 +12,7 @@ const HomeMain = () => {
         <ServiceMain/>
         <HomeAppointmentSection/>
         <HomeTestimonial/>
+        <HomePageContact/>
         </div>
     );
 };

@@ -8,13 +8,13 @@ const HomeAppointmentSection = () => {
     return (
       <section
         style={{ background: `url(${background})`, backgroundSize: "cover" }}
-        className="mt-10 rounded-xl"
+        className="mt-16 rounded-xl"
       >
         <div className="flex justify-center items-center">
           <div className="flex-1 hidden md:block">
-            <img className="mt-[-200]" src={doctor} alt="doctor" />
+            <img className="mt-[-80px]" src={doctor} alt="doctor" />
           </div>
-          <div className="text-gray-50 flex-1 p-3">
+          <div className="text-gray-50 flex-1 p-3 text-center">
             <p className="text-primary">Appointment</p>
             <p className="text-xl font-medium">Make an Appointment Today!</p>
             <p className="text-justify">

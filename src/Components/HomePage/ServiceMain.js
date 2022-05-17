@@ -56,7 +56,7 @@ const ServiceMain = () => {
             </p>
             <div className="card-actions justify-center mt-3">
             <button onClick={()=>navigate('/appointment')} className="btn btn-primary bg-gradient-to-r from-secondary to-primary text-gray-50">Get Appointment</button>
-          </div>
+            </div>
           </div>
           <figure className="p-2">
             <img className="rounded-3xl inline-block w-auto h-auto" src={downBanner} alt="Album" />
