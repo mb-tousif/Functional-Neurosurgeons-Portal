@@ -4,7 +4,7 @@ const NotFoundPage = () => {
     return (
         <div>
         <div className="w-full mt-10">
-          <img className="mx-auto my-auto shadow-2xl rounded-xl" src={ErrorImage} alt="Page not found" />
+          <img className="mx-auto my-auto shadow-2xl w-96 rounded-xl" src={ErrorImage} alt="Page not found" />
         </div>
         <div className="ml-10 mt-8 text-center text-zinc-700">
           <h2 className="text-3xl bolder font-extrabold">

@@ -11,7 +11,7 @@ const AppointmentBanner = ({date, setDate}) => {
                     <div className='md:w-1/2 mx-auto my-auto p-2'>
                      <DayPicker mode="single" selected={date} onDayClick={setDate}/>
                     </div>
-                    <img src={banner} className="mx-auto my-auto mt-6 p-2 rounded-lg md:w-1/2 shadow-2xl" alt='TopBanner'/>
+                    <img src={banner} className="mx-auto my-auto mt-6 p-2 hidden md:block rounded-lg md:w-1/2 shadow-2xl" alt='TopBanner'/>
                 </div>
             </div>
         </div>
