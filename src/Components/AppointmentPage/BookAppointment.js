@@ -8,7 +8,7 @@ const BookAppointment = ({appointments, date, setAppointments}) => {
     const {_id, name, slots } = appointments;
     // console.log(appointments);
     const formatedDate = format(date, 'PP')
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const handleAppointment=(e)=>{
       e.preventDefault();
       const slot = e.target.slot.value;

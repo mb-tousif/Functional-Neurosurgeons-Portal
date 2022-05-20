@@ -5,6 +5,7 @@ import Loading from '../SharedPages/Loading/Loading';
 import { Link, Navigate, useLocation } from 'react-router-dom';
 import LogIn from './LogIn';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle,useUpdateProfile } from 'react-firebase-hooks/auth';
+import useToken from '../../Hooks/useToken';
 const Register = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError]=useSignInWithGoogle(auth);
     const [createUserWithEmailAndPassword, user, loading, error] =
@@ -12,15 +13,16 @@ const Register = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const location = useLocation("/");
+    const [token] = useToken(user || googleUser);
     if (loading || googleLoading || updating) {
       return <Loading />;
     }
-    if(user || googleUser){
-    return <Navigate to="/appointment" state={{ from: location }} replace />;
+    if (token) {
+      return <Navigate to="/appointment" state={{ from: location }} replace />;
     }
 
     const onSubmit= async data =>{
-        console.log(data);
+        // console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password, data.name);
         await updateProfile({ displayName:data.name });
         console.log('Update done');
